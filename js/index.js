@@ -32,9 +32,19 @@ class Message {
     return `${this.from}: ${this.text}`
   }
 }
+const messages =[]
 
 const msg1 = new Message(`Susan`, `Chau`, `Hi, did you get my email?`);
 const msg2 = new Message(`Chau`, `Susan`, `No. Didn't check my emails yet. brb`);
+
+messages.push(msg1)
+messages.push(msg2)
+
+function renderMessages(){
+messages.forEach(msg =>{
+  container.innerHTML +=`<li> ${msg.getformettedText()}</li>`})
+}
+
 
 console.log(msg1.time)
 console.log(msg1.getFormattedDate())
@@ -46,3 +56,4 @@ Using the code above...
 3. Print all messages to the console using the getFormattedText
 4. Push a new message to the Array and re-update the console
 */
+
